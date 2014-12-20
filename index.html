@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bower_components/datatables/media/css/jquery.dataTables.css" />
+    <link rel="stylesheet" href="bower_components/iCheck/skins/flat/blue.css" />
+    <!-- <link data-require="datatables@1.9.4" data-semver="1.9.4" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/datatables/1.9.4/css/demo_table.css" />
+    <link data-require="datatables@1.9.4" data-semver="1.9.4" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/datatables/1.9.4/css/demo_page.css" /> -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="page-header">
+                    <h1>DataTables <small>Radio Button Sorting</small></h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-striped table-hover datatables" id="special">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th data-sorting-type="radio">Box</th>
+                            <th data-sorting-type="radio">Type</th>
+                            <th data-sorting-type="select">City</th>
+                            <th data-sorting-type="checkbox">Warranty Lost?</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- (tr>td{Item $$}+td>input[type=radio][name=box$$][value=1][checked]+label{1}+input[type=radio][name=box$$][value=2]+label{2}^td>input[type=radio][name=type$$][value=RmaU]+label{Rma-U}+input[type=radio][name=type$$][value=Screened][checked]+label{Screened}^td>select[name=city]>option[value=Sampa]{Sampa}+option[value=Aquiraz]{Aquiraz}^^td>input[type=checkbox][name="Warranty Lost"][value=true]+label{Has Warranty Lost})*15 -->
+                        <tr>
+                            <td>Item 01</td>
+                            <td>
+                                <input type="radio" name="box01" value="1" checked="" />
+                                <label>1</label>
+                                <input type="radio" name="box01" value="2" />
+                                <label>2</label>
+                            </td>
+                            <td>
+                                <input type="radio" name="type01" value="RmaU" />
+                                <label>Rma-U</label>
+                                <input type="radio" name="type01" value="Screened" checked="" />
+                                <label>Screened</label>
+                            </td>
+                            <td>
+                                <select name="city">
+                                    <option value="Sampa">Sampa</option>
+                                    <option value="Aquiraz">Aquiraz</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="Warranty Lost" value="true" />
+                                <label>Has Warranty Lost</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Item 02</td>
+                            <td>
+                                <input type="radio" name="box02" value="1" checked="" />
+                                <label>1</label>
+                                <input type="radio" name="box02" value="2" />
+                                <label>2</label>
+                            </td>
+                            <td>
+                                <input type="radio" name="type02" value="RmaU" />
+                                <label>Rma-U</label>
+                                <input type="radio" name="type02" value="Screened" checked="" />
+                                <label>Screened</label>
+                            </td>
+                            <td>
+                                <select name="city">
+                                    <option value="Sampa">Sampa</option>
+                                    <option value="Aquiraz">Aquiraz</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="Warranty Lost" value="true" />
+                                <label>Has Warranty Lost</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Item 03</td>
+                            <td>
+                                <input type="radio" name="box03" value="1" checked="" />
+                                <label>1</label>
+                                <input type="radio" name="box03" value="2" />
+                                <label>2</label>
+                            </td>
+                            <td>
+                                <input type="radio" name="type03" value="RmaU" />
+                                <label>Rma-U</label>
+                                <input type="radio" name="type03" value="Screened" checked="" />
+                                <label>Screened</label>
+                            </td>
+                            <td>
+                                <select name="city">
+                                    <option value="Sampa">Sampa</option>
+                                    <option value="Aquiraz">Aquiraz</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="Warranty Lost" value="true" />
+                                <label>Has Warranty Lost</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Item 04</td>
+                            <td>
+                                <input type="radio" name="box04" value="1" checked="" />
+                                <label>1</label>
+                                <input type="radio" name="box04" value="2" />
+                                <label>2</label>
+                            </td>
+                            <td>
+                                <input type="radio" name="type04" value="RmaU" />
+                                <label>Rma-U</label>
+                                <input type="radio" name="type04" value="Screened" checked="" />
+                                <label>Screened</label>
+                            </td>
+                            <td>
+                                <select name="city">
+                                    <option value="Sampa">Sampa</option>
+                                    <option value="Aquiraz">Aquiraz</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="Warranty Lost" value="true" />
+                                <label>Has Warranty Lost</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Item 05</td>
+                            <td>
+                                <input type="radio" name="box05" value="1" checked="" />
+                                <label>1</label>
+                                <input type="radio" name="box05" value="2" />
+                                <label>2</label>
+                            </td>
+                            <td>
+                                <input type="radio" name="type05" value="RmaU" />
+                                <label>Rma-U</label>
+                                <input type="radio" name="type05" value="Screened" checked="" />
+                                <label>Screened</label>
+                            </td>
+                            <td>
+                                <select name="city">
+                                    <option value="Sampa">Sampa</option>
+                                    <option value="Aquiraz">Aquiraz</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="Warranty Lost" value="true" />
+                                <label>Has Warranty Lost</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Item 06</td>
+                            <td>
+                                <input type="radio" name="box06" value="1" checked="" />
+                                <label>1</label>
+                                <input type="radio" name="box06" value="2" />
+                                <label>2</label>
+                            </td>
+                            <td>
+                                <input type="radio" name="type06" value="RmaU" />
+                                <label>Rma-U</label>
+                                <input type="radio" name="type06" value="Screened" checked="" />
+                                <label>Screened</label>
+                            </td>
+                            <td>
+                                <select name="city">
+                                    <option value="Sampa">Sampa</option>
+                                    <option value="Aquiraz">Aquiraz</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="Warranty Lost" value="true" />
+                                <label>Has Warranty Lost</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Item 07</td>
+                            <td>
+                                <input type="radio" name="box07" value="1" checked="" />
+                                <label>1</label>
+                                <input type="radio" name="box07" value="2" />
+                                <label>2</label>
+                            </td>
+                            <td>
+                                <input type="radio" name="type07" value="RmaU" />
+                                <label>Rma-U</label>
+                                <input type="radio" name="type07" value="Screened" checked="" />
+                                <label>Screened</label>
+                            </td>
+                            <td>
+                                <select name="city">
+                                    <option value="Sampa">Sampa</option>
+                                    <option value="Aquiraz">Aquiraz</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="Warranty Lost" value="true" />
+                                <label>Has Warranty Lost</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Item 08</td>
+                            <td>
+                                <input type="radio" name="box08" value="1" checked="" />
+                                <label>1</label>
+                                <input type="radio" name="box08" value="2" />
+                                <label>2</label>
+                            </td>
+                            <td>
+                                <input type="radio" name="type08" value="RmaU" />
+                                <label>Rma-U</label>
+                                <input type="radio" name="type08" value="Screened" checked="" />
+                                <label>Screened</label>
+                            </td>
+                            <td>
+                                <select name="city">
+                                    <option value="Sampa">Sampa</option>
+                                    <option value="Aquiraz">Aquiraz</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="Warranty Lost" value="true" />
+                                <label>Has Warranty Lost</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Item 09</td>
+                            <td>
+                                <input type="radio" name="box09" value="1" checked="" />
+                                <label>1</label>
+                                <input type="radio" name="box09" value="2" />
+                                <label>2</label>
+                            </td>
+                            <td>
+                                <input type="radio" name="type09" value="RmaU" />
+                                <label>Rma-U</label>
+                                <input type="radio" name="type09" value="Screened" checked="" />
+                                <label>Screened</label>
+                            </td>
+                            <td>
+                                <select name="city">
+                                    <option value="Sampa">Sampa</option>
+                                    <option value="Aquiraz">Aquiraz</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="Warranty Lost" value="true" />
+                                <label>Has Warranty Lost</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Item 10</td>
+                            <td>
+                                <input type="radio" name="box10" value="1" checked="" />
+                                <label>1</label>
+                                <input type="radio" name="box10" value="2" />
+                                <label>2</label>
+                            </td>
+                            <td>
+                                <input type="radio" name="type10" value="RmaU" />
+                                <label>Rma-U</label>
+                                <input type="radio" name="type10" value="Screened" checked="" />
+                                <label>Screened</label>
+                            </td>
+                            <td>
+                                <select name="city">
+                                    <option value="Sampa">Sampa</option>
+                                    <option value="Aquiraz">Aquiraz</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="Warranty Lost" value="true" />
+                                <label>Has Warranty Lost</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Item 11</td>
+                            <td>
+                                <input type="radio" name="box11" value="1" checked="" />
+                                <label>1</label>
+                                <input type="radio" name="box11" value="2" />
+                                <label>2</label>
+                            </td>
+                            <td>
+                                <input type="radio" name="type11" value="RmaU" />
+                                <label>Rma-U</label>
+                                <input type="radio" name="type11" value="Screened" checked="" />
+                                <label>Screened</label>
+                            </td>
+                            <td>
+                                <select name="city">
+                                    <option value="Sampa">Sampa</option>
+                                    <option value="Aquiraz">Aquiraz</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="Warranty Lost" value="true" />
+                                <label>Has Warranty Lost</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Item 12</td>
+                            <td>
+                                <input type="radio" name="box12" value="1" checked="" />
+                                <label>1</label>
+                                <input type="radio" name="box12" value="2" />
+                                <label>2</label>
+                            </td>
+                            <td>
+                                <input type="radio" name="type12" value="RmaU" />
+                                <label>Rma-U</label>
+                                <input type="radio" name="type12" value="Screened" checked="" />
+                                <label>Screened</label>
+                            </td>
+                            <td>
+                                <select name="city">
+                                    <option value="Sampa">Sampa</option>
+                                    <option value="Aquiraz">Aquiraz</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="Warranty Lost" value="true" />
+                                <label>Has Warranty Lost</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Item 13</td>
+                            <td>
+                                <input type="radio" name="box13" value="1" checked="" />
+                                <label>1</label>
+                                <input type="radio" name="box13" value="2" />
+                                <label>2</label>
+                            </td>
+                            <td>
+                                <input type="radio" name="type13" value="RmaU" />
+                                <label>Rma-U</label>
+                                <input type="radio" name="type13" value="Screened" checked="" />
+                                <label>Screened</label>
+                            </td>
+                            <td>
+                                <select name="city">
+                                    <option value="Sampa">Sampa</option>
+                                    <option value="Aquiraz">Aquiraz</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="Warranty Lost" value="true" />
+                                <label>Has Warranty Lost</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Item 14</td>
+                            <td>
+                                <input type="radio" name="box14" value="1" checked="" />
+                                <label>1</label>
+                                <input type="radio" name="box14" value="2" />
+                                <label>2</label>
+                            </td>
+                            <td>
+                                <input type="radio" name="type14" value="RmaU" />
+                                <label>Rma-U</label>
+                                <input type="radio" name="type14" value="Screened" checked="" />
+                                <label>Screened</label>
+                            </td>
+                            <td>
+                                <select name="city">
+                                    <option value="Sampa">Sampa</option>
+                                    <option value="Aquiraz">Aquiraz</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="Warranty Lost" value="true" />
+                                <label>Has Warranty Lost</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Item 15</td>
+                            <td>
+                                <input type="radio" name="box15" value="1" checked="" />
+                                <label>1</label>
+                                <input type="radio" name="box15" value="2" />
+                                <label>2</label>
+                            </td>
+                            <td>
+                                <input type="radio" name="type15" value="RmaU" />
+                                <label>Rma-U</label>
+                                <input type="radio" name="type15" value="Screened" checked="" />
+                                <label>Screened</label>
+                            </td>
+                            <td>
+                                <select name="city">
+                                    <option value="Sampa">Sampa</option>
+                                    <option value="Aquiraz">Aquiraz</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="Warranty Lost" value="true" />
+                                <label>Has Warranty Lost</label>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- libraries -->
+    <script src="js/application.js"></script>
+    <!--
+    <script src="bower_components/jquery/jquery.min.js"></script>
+    <script src="bower_components/datatables/media/js/jquery.dataTables.js"></script>
+    <script src="bower_components/iCheck/icheck.min.js"></script>
+    -->
+    <!-- app -->
+    <script src="js/dataTables.customSorting.js"></script>
+    <script src="js/dataTables.factory.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
