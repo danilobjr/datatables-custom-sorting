@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Datatables - Custom Sorting : Custom sorting input elements for Datatables 1.9.4 and jQuery 1.9.1">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Datatables - Custom Sorting</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/danilojrr/datatables-custom-sorting">View on GitHub</a>
+
+          <h1 id="project_title">Datatables - Custom Sorting</h1>
+          <h2 id="project_tagline">Custom sorting input elements for Datatables 1.9.4 and jQuery 1.9.1</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/danilojrr/datatables-custom-sorting/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/danilojrr/datatables-custom-sorting/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="datatables---custom-sorting" class="anchor" href="#datatables---custom-sorting" aria-hidden="true"><span class="octicon octicon-link"></span></a>Datatables - Custom Sorting</h1>
+
+<blockquote>
+<p>This is an example of how to implement custom sorting for HTML input elements with <a href="http://legacy.datatables.net/ref">DataTables 1.9.4</a> and <a href="http://jquery.com/">jQuery 1.9.1</a>.</p>
+</blockquote>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<ol>
+<li>Put jQuery and DataTables scripts in your page.
+<p>
+</p>
+<pre><code>&lt;script src="path/to/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="path/to/jquery.dataTables.js"&gt;&lt;/script&gt;</code></pre>
+
+<p>How to use and style? Check the <a href="http://datatables.net">DataTables</a> website. But remember that we are using the 1.9.4 version. So, check the <a href="http://legacy.datatables.net/ref">docs of the legacy API</a>.</p>
+</li>
+<li>Put the custom sorting javascript file after dataTables.js file.
+<p>
+</p>
+<pre><code>&lt;script src="path/to/dataTables.customSorting.js"&gt;&lt;/script&gt;</code></pre>
+
+</li>
+<li>Set your table markup.
+<p>
+</p>
+<pre><code>&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Product Name&lt;/th&gt;
+            &lt;th&gt;Warranty Lost?&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Remote Controlled Car&lt;/td&gt;
+            &lt;td&gt;&lt;input type="checkbox" value="true"&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+
+</li>
+<li>Now setup the DataTables plugin with these options.</li>
+<pre><code>$('table').dataTable({
+    "aoColumns": {
+        null,
+        "sSortDataType": "checkbox"
+    }
+});</code></pre>
+<p>You must set an option called <code>aoColumns</code> to the DataTables setup. Each property of it represents the <code>th</code> of the table element.</p>
+<p>Where you want the default sorting behavior of DataTables, set null for that property. And for a custom sorting, set the <code>sSortDataType</code> property with a valid custom sorting type: <code>checkbox</code>, <code>radiobutton</code> or <code>select</code>.</p>
+<li>That's it! Now you can sort the column of the example with checkboxes.</li>
+</ol>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Datatables - Custom Sorting maintained by <a href="https://github.com/danilojrr">danilojrr</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
