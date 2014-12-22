@@ -1,0 +1,8 @@
+table.dataTable tr.odd {
+    background-color: #eeeeee;
+}
+
+table.dataTable tr.odd td.sorting_1,
+table.dataTable tr.even td.sorting_1 {
+    background-color: transparent;
+}
