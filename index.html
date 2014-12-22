@@ -51,24 +51,20 @@
             </h2>
 
             <ol>
-                <li>Put jQuery and DataTables scripts in your page.
-                    <p>
-                    </p>
+                <li>
+                    <p>Put jQuery and DataTables scripts in your page.</p>
                     <pre><code>&lt;script src="path/to/jquery.min.js"&gt;&lt;/script&gt;
 &lt;script src="path/to/jquery.dataTables.js"&gt;&lt;/script&gt;</code></pre>
 
                     <p>How to use and style? Check the <a href="http://datatables.net">DataTables</a> website. But remember that we are using the 1.9.4 version. So, check the <a href="http://legacy.datatables.net/ref">docs of the legacy API</a>.</p>
                 </li>
-                <li>Put the custom sorting javascript file after dataTables.js file.
-                    <p>
-                    </p>
-                    <pre><code>&lt;script src="path/to/dataTables.customSorting.js"&gt;&lt;/script&gt;</code></pre>
-
+                <li>
+                    <p>Put the custom sorting javascript file after dataTables.js file.</p>
+                    <p><pre><code>&lt;script src="path/to/dataTables.customSorting.js"&gt;&lt;/script&gt;</code></pre></p>
                 </li>
-                <li>Set your table markup.
-                    <p>
-                    </p>
-                    <pre><code>&lt;table&gt;
+                <li>
+                    <p>Set your table markup.</p>
+                    <p><pre><code>&lt;table&gt;
     &lt;thead&gt;
         &lt;tr&gt;
             &lt;th&gt;Product Name&lt;/th&gt;
@@ -81,18 +77,19 @@
             &lt;td&gt;&lt;input type="checkbox" value="true"&gt;&lt;/td&gt;
         &lt;/tr&gt;
     &lt;/tbody&gt;
-&lt;/table&gt;</code></pre>
-
+&lt;/table&gt;</code></pre></p>
                 </li>
-                <li>Now setup the DataTables plugin with these options.</li>
-                <pre><code>$('table').dataTable({
+                <li>
+                    <p>Now setup the DataTables plugin with these options.</p>
+                    <pre><code>$('table').dataTable({
     "aoColumns": {
         null,
         "sSortDataType": "checkbox"
     }
 });</code></pre>
-                <p>You must set an option called <code>aoColumns</code> to the DataTables setup. Each property of it represents the <code>th</code> of the table element.</p>
-                <p>Where you want the default sorting behavior of DataTables, set null for that property. And for a custom sorting, set the <code>sSortDataType</code> property with a valid custom sorting type: <code>checkbox</code>, <code>radiobutton</code> or <code>select</code>.</p>
+                    <p>You must set an option called <code>aoColumns</code> to the DataTables setup. Each property of it represents the <code>th</code> of the table element.</p>
+                    <p>Where you want the default sorting behavior of DataTables, set null for that property. And for a custom sorting, set the <code>sSortDataType</code> property with a valid custom sorting type: <code>checkbox</code>, <code>radiobutton</code> or <code>select</code>.</p>
+                </li>
                 <li>That's it! Now you can sort the column of the example with checkboxes.</li>
             </ol>
         </section>
