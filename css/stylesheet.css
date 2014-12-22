@@ -189,12 +189,16 @@ pre code {
 }
 
 blockquote {
+  position: relative;
   color: #666;
   margin-bottom: 20px;
   padding: 0 0 0 20px;
   border-left: 3px solid #bbb;
 }
 
+blockquote p {
+  margin: 10px 125px 15px 0;
+}
 
 ul, ol, dl {
   margin-bottom: 15px
@@ -271,7 +275,7 @@ Full-Width Styles
   margin: 0 auto;
 }
 
-#forkme_banner {
+#forkme_banner, .btn-lg {
   display: block;
   position: absolute;
   top:0;
@@ -279,12 +283,29 @@ Full-Width Styles
   z-index: 10;
   padding: 10px 50px 10px 10px;
   color: #fff;
-  background: url('../images/blacktocat.png') #0090ff no-repeat 95% 50%;
   font-weight: 700;
   box-shadow: 0 0 10px rgba(0,0,0,.5);
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
 }
+
+#forkme_banner {
+  background: url('../images/blacktocat.png') #0090ff no-repeat 95% 50%;
+}
+
+.btn-lg {
+  right: 0;
+  width: 90px;
+  padding: 12px 10px 10px;
+  text-transform: uppercase;
+  text-align: center;
+  background: #0090ff;
+  border-radius: 2px;
+}
+
+/*.btn-lg:hover {
+  text-decoration: none;
+}*/
 
 #header_wrap {
   background: #212121;
