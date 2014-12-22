@@ -21,7 +21,7 @@ var dataTablesFactory = function() {
         var table = $(_selector);
 
         configureDataSortTypes(table);
-        debugger;
+
         return table.dataTable(_config);
     }
 
