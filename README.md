@@ -3,13 +3,10 @@ Datatables - Custom Sorting
 
 > This is an example of how to implement custom sorting for HTML input elements with [DataTables 1.9.4](http://legacy.datatables.net/ref) and [jQuery 1.9.1](http://jquery.com/).
 
-Demo
-----
-
-See an example in the <a href="http://danilojrr.github.io/datatables-custom-sorting/">demo page</a>.
-
 Usage
 -----
+
+> See <a href="http://danilojrr.github.io/datatables-custom-sorting/">this page</a> for more detail.
 
 <ol>
 <li>Put jQuery and DataTables scripts in your page.</li>
