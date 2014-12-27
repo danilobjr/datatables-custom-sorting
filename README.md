@@ -6,7 +6,7 @@ Datatables - Custom Sorting
 Demo
 ----
 
-See an example in the <a href="demo.html">demo page</a>.
+See an example in the <a href="http://danilojrr.github.io/datatables-custom-sorting/">demo page</a>.
 
 Usage
 -----
