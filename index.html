@@ -133,7 +133,7 @@
                 </li>
                 <li>
                     <p>Now, all you need to do is call the <code>instantiate()</code> method from the <code>dataTablesFactory</code> object.</p>
-                    <p><pre><code>dataTablesFactory.instantiate();</code></pre></p>
+                    <p><pre><code>dataTablesFactory().instantiate();</code></pre></p>
                     <p>Done! =]</p>
                     <p>The factory will see that you desire to sort the column with the <code>data-sorting-type=""</code> attribute and it configure DataTables for you.</p>
                 </li>
@@ -157,7 +157,7 @@
             <p><strong>Returns</strong>: DataTables Object.</p>
 
             <p>Example</p>
-            <p><pre><code>dataTablesFactory<strong>.instantiate()</strong>;</code></pre></p>
+            <p><pre><code>dataTablesFactory()<strong>.instantiate()</strong>;</code></pre></p>
 
             <h3>selector()</h3>
 
@@ -168,7 +168,7 @@
             <p><strong>Returns</strong>: Factory API.</p>
 
             <p>Example</p>
-            <p><pre><code>dataTablesFactory
+            <p><pre><code>dataTablesFactory()
     <strong>.selector('#myTable')</strong>
     .instantiate();</code></pre></p>
 
@@ -181,7 +181,7 @@
             <p><strong>Returns</strong>: Factory API.</p>
 
             <p>Example</p>
-            <p><pre><code>dataTablesFactory
+            <p><pre><code>dataTablesFactory()
     .selector('#myTable')
     <strong>.setup({
         "bPaginate": false
