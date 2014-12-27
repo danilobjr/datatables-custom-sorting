@@ -95,23 +95,19 @@ Usage
                 <li>That's it! Now you can sort the column of the example with checkboxes.</li>
             </ol>
 
-            <h2>
-                <a id="datatables-factory" class="anchor" href="#datatables-factory" aria-hidden="true">
-                    <span class="octicon octicon-link"></span>
-                </a>
-                Plus Content - DataTables Factory
-            </h2>
+DataTables Factory - Plus Content
+---------------------------------
 
-            <ol>
-                <li>
-                    <p>So far, so good. But I also implemented a factory for DataTables plugin. Thus, you can instantiate DataTables and apply the custom sorting very easliy.</p>
-                    <p>To use it, with jQuery, DataTables and custom sorting js files in place, like we saw before, you need to put the <strong>factory</strong> file after the <strong>custom sorting</strong> file.</p>
-                    <p><pre><code>&lt;script src="path/to/dataTables.customSorting.js"&gt;&lt;/script&gt;
-&lt;script src="path/to/dataTables.factory.js"&gt;&lt;/script&gt;</code></pre></p>
-                </li>
-                <li>
-                    <p>Set the <code>data-sorting-type=""</code> attribute to the desired <code>&lt;th&gt;</code> element in your table.</p>
-                    <p><pre><code>&lt;table&gt;
+1. So far, so good. But I also implemented a factory for DataTables plugin. Thus, you can instantiate DataTables and apply the custom sorting very easliy.
+
+    To use it, with jQuery, DataTables and custom sorting js files in place, like we saw before, you need to put the <strong>factory</strong> file after the <strong>custom sorting</strong> file.
+
+    <pre><code>&lt;script src="path/to/dataTables.customSorting.js"&gt;&lt;/script&gt;
+&lt;script src="path/to/dataTables.factory.js"&gt;&lt;/script&gt;</code></pre>
+
+2. Set the <code>data-sorting-type=""</code> attribute to the desired <code>&lt;th&gt;</code> element in your table.
+
+    <pre><code>&lt;table&gt;
     &lt;thead&gt;
         &lt;tr&gt;
             &lt;th&gt;Product Name&lt;/th&gt;
@@ -124,62 +120,59 @@ Usage
             &lt;td&gt;&lt;input type="checkbox" value="true"&gt;&lt;/td&gt;
         &lt;/tr&gt;
     &lt;/tbody&gt;
-&lt;/table&gt;</code></pre></p>
-                    <p>The valid types for custom sorting attribute are <code>checkbox</code>, <code>radiobutton</code> and <code>select</code>.</p>
-                </li>
-                <li>
-                    <p>Now, all you need to do is call the <code>instantiate()</code> method from the <code>dataTablesFactory</code> object.</p>
-                    <p><pre><code>dataTablesFactory().instantiate();</code></pre></p>
-                    <p>Done! =]</p>
-                    <p>The factory will see that you desire to sort the column with the <code>data-sorting-type=""</code> attribute and it configure DataTables for you.</p>
-                </li>
-            </ol>
+&lt;/table&gt;</code></pre>
 
-            <h2>
-                <a id="datatables-factory" class="anchor" href="#datatables-factory" aria-hidden="true">
-                    <span class="octicon octicon-link"></span>
-                </a>
-                Factory API
-            </h2>
+    The valid types for custom sorting attribute are <code>checkbox</code>, <code>radiobutton</code> and <code>select</code>.
 
-            <p>All methods of the API are chainable. So, doesn't matter the order you call them, except for the <code>instantiate()</code> method. It need to be the last one.</p>
+3. Now, all you need to do is call the <code>instantiate()</code> method from the <code>dataTablesFactory</code> object.
 
-            <h3>instantiate()</h3>
+    <pre><code>dataTablesFactory().instantiate();</code></pre>
 
-            <p><strong>Description</strong>: Initializes the DataTables.</p>
+    Done! =]
 
-            <p><strong>Parameters</strong>: None.</p>
+    The factory will see that you desire to sort the column with the <code>data-sorting-type=""</code> attribute and it configure DataTables for you.
 
-            <p><strong>Returns</strong>: DataTables Object.</p>
+Factory API
+-----------
 
-            <p>Example</p>
-            <p><pre><code>dataTablesFactory()<strong>.instantiate()</strong>;</code></pre></p>
+All methods of the API are chainable. So, doesn't matter the order you call them, except for the <code>instantiate()</code> method. It need to be the last one.
 
-            <h3>selector()</h3>
+### instantiate()
 
-            <p><strong>Description</strong>: Specify a selector for the table.</p>
+**Description**: Initializes the DataTables.
 
-            <p><strong>Parameters</strong>: jQuery Selector.</p>
+**Parameters**: None.
 
-            <p><strong>Returns</strong>: Factory API.</p>
+**Returns**: DataTables Object.
 
-            <p>Example</p>
-            <p><pre><code>dataTablesFactory()
+Example
+<pre><code>dataTablesFactory()<strong>.instantiate()</strong>;</code></pre>
+
+### selector()
+
+**Description**: Specify a selector for the table.
+
+**Parameters**: jQuery Selector.
+
+**Returns**: Factory API.
+
+Example
+<pre><code>dataTablesFactory()
     <strong>.selector('#myTable')</strong>
-    .instantiate();</code></pre></p>
+    .instantiate();</code></pre>
 
-            <h3>setup()</h3>
+<h3>setup()</h3>
 
-            <p><strong>Description</strong>: Set the DataTables options. You can see all options on the <a href="http://legacy.datatables.net/ref">DataTable legacy docs</a>.</p>
+**Description**: Set the DataTables options. You can see all options on the <a href="http://legacy.datatables.net/ref">DataTable legacy docs</a>.
 
-            <p><strong>Parameters</strong>: Javascript Object Literal.</p>
+**Parameters**: Javascript Object Literal.
 
-            <p><strong>Returns</strong>: Factory API.</p>
+**Returns**: Factory API.
 
-            <p>Example</p>
-            <p><pre><code>dataTablesFactory()
+Example
+<pre><code>dataTablesFactory()
     .selector('#myTable')
     <strong>.setup({
         "bPaginate": false
     })</strong>
-    .instantiate();</code></pre></p>
+    .instantiate();</code></pre>
