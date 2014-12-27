@@ -1,4 +1,4 @@
-var dataTablesFactory = function() {
+function dataTablesFactory() {
 
     var _selector = 'table.datatables';
     var _config = {
@@ -17,12 +17,10 @@ var dataTablesFactory = function() {
 
     ///////////
 
-    function instantiate () {
-        var table = $(_selector);
+    function selector(jQuerySelector) {
+        _selector = jQuerySelector;
 
-        configureDataSortTypes(table);
-
-        return table.dataTable(_config);
+        return _api;
     }
 
     function setup(config) {
@@ -31,24 +29,64 @@ var dataTablesFactory = function() {
         return _api;
     }
 
-    function selector(jQuerySelector) {
-        _selector = jQuerySelector;
+    function instantiate () {
+        var table = $(_selector);
 
-        return _api;
+        configureDataSortTypes(table);
+
+        return table.dataTable(_config);
+    }
+
+    function instantiate () {
+        var tableElement = $(_selector);
+
+        configureDataSortTypes(tableElement);
+
+        return tableElement.dataTable(_config);
     }
 
     function configureDataSortTypes(table) {
         var headers = table.find('thead th');
 
-        var sortingConfig = {
-            aoColumns: []
-        };
+        if (existsSomeDataSortingTypeAttribute(headers)) {
+            var sortingConfig = {
+                aoColumns: []
+            };
 
-        headers.each(function (index, element) {
-            var sortingType = $(element).data().sortingType;
-            sortingConfig.aoColumns.push({ "sSortDataType": sortingType });
-        });
+            headers.each(function (index, element) {
+                var sortingType = $(element).data().sortingType;
+                var sSortDataType = (sortingType) ? { sSortDataType: sortingType } : null;
 
-        _config = $.extend({}, _config, sortingConfig);
+                sortingConfig.aoColumns.push(sSortDataType);
+            });
+
+            _config = mergeDefaultAoColumnsOptionsWithUserDefinedAoColumnsOptions(_config, sortingConfig);
+        }
     }
-}();
+
+    function existsSomeDataSortingTypeAttribute(headers) {
+        return !!$(headers)
+            .filter(function (index, element) {
+                return !!$(element).data().sortingType;
+            })
+            .length;
+    }
+
+    // aoColumns is an option of DataTables plugin
+    function mergeDefaultAoColumnsOptionsWithUserDefinedAoColumnsOptions(config, sortingConfig) {
+        if (config.aoColumns && (config.aoColumns.length !== sortingConfig.aoColumns.length)) {
+            console.error('DataTable Setup Error: "aoColumns" option do not match with number of columns');
+            return;
+        }
+
+        if (!!config.aoColumns) {
+            for (var i = 0; i < sortingConfig.aoColumns.length; i++) {
+                config.aoColumns[i] = $.extend({}, config.aoColumns[i], sortingConfig.aoColumns[i]);
+            };
+        } else {
+            config = $.extend({}, config, sortingConfig);
+        }
+
+        return config;
+    }
+}
