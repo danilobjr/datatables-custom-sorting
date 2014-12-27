@@ -2,427 +2,201 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/jquery.dataTables.css" />
-    <link rel="stylesheet" href="css/icheck/blue.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Datatables - Custom Sorting : Custom sorting input elements for Datatables 1.9.4 and jQuery 1.9.1">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/stylesheet.css">
+
+    <title>Datatables - Custom Sorting</title>
 </head>
 
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="page-header">
-                    <h1>DataTables <small>Custom Sorting</small></h1>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <table class="table table-striped table-hover datatables" id="special">
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th data-sorting-type="radio">Box</th>
-                            <th data-sorting-type="radio">Type</th>
-                            <th data-sorting-type="select">City</th>
-                            <th data-sorting-type="checkbox">Warranty Lost?</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- (tr>td{Item $$}+td>input[type=radio][name=box$$][value=1][checked]+label{1}+input[type=radio][name=box$$][value=2]+label{2}^td>input[type=radio][name=type$$][value=RmaU]+label{Rma-U}+input[type=radio][name=type$$][value=Screened][checked]+label{Screened}^td>select[name=city]>option[value=Sampa]{Sampa}+option[value=Aquiraz]{Aquiraz}^^td>input[type=checkbox][name="Warranty Lost"][value=true]+label{Has Warranty Lost})*15 -->
-                        <tr>
-                            <td>Item 01</td>
-                            <td>
-                                <input type="radio" name="box01" value="1" checked="" />
-                                <label>1</label>
-                                <input type="radio" name="box01" value="2" />
-                                <label>2</label>
-                            </td>
-                            <td>
-                                <input type="radio" name="type01" value="RmaU" />
-                                <label>Rma-U</label>
-                                <input type="radio" name="type01" value="Screened" checked="" />
-                                <label>Screened</label>
-                            </td>
-                            <td>
-                                <select name="city">
-                                    <option value="Sampa">Sampa</option>
-                                    <option value="Aquiraz">Aquiraz</option>
-                                </select>
-                            </td>
-                            <td>
-                                <input type="checkbox" name="Warranty Lost" value="true" />
-                                <label>Has Warranty Lost</label>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Item 02</td>
-                            <td>
-                                <input type="radio" name="box02" value="1" checked="" />
-                                <label>1</label>
-                                <input type="radio" name="box02" value="2" />
-                                <label>2</label>
-                            </td>
-                            <td>
-                                <input type="radio" name="type02" value="RmaU" />
-                                <label>Rma-U</label>
-                                <input type="radio" name="type02" value="Screened" checked="" />
-                                <label>Screened</label>
-                            </td>
-                            <td>
-                                <select name="city">
-                                    <option value="Sampa">Sampa</option>
-                                    <option value="Aquiraz">Aquiraz</option>
-                                </select>
-                            </td>
-                            <td>
-                                <input type="checkbox" name="Warranty Lost" value="true" />
-                                <label>Has Warranty Lost</label>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Item 03</td>
-                            <td>
-                                <input type="radio" name="box03" value="1" checked="" />
-                                <label>1</label>
-                                <input type="radio" name="box03" value="2" />
-                                <label>2</label>
-                            </td>
-                            <td>
-                                <input type="radio" name="type03" value="RmaU" />
-                                <label>Rma-U</label>
-                                <input type="radio" name="type03" value="Screened" checked="" />
-                                <label>Screened</label>
-                            </td>
-                            <td>
-                                <select name="city">
-                                    <option value="Sampa">Sampa</option>
-                                    <option value="Aquiraz">Aquiraz</option>
-                                </select>
-                            </td>
-                            <td>
-                                <input type="checkbox" name="Warranty Lost" value="true" />
-                                <label>Has Warranty Lost</label>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Item 04</td>
-                            <td>
-                                <input type="radio" name="box04" value="1" checked="" />
-                                <label>1</label>
-                                <input type="radio" name="box04" value="2" />
-                                <label>2</label>
-                            </td>
-                            <td>
-                                <input type="radio" name="type04" value="RmaU" />
-                                <label>Rma-U</label>
-                                <input type="radio" name="type04" value="Screened" checked="" />
-                                <label>Screened</label>
-                            </td>
-                            <td>
-                                <select name="city">
-                                    <option value="Sampa">Sampa</option>
-                                    <option value="Aquiraz">Aquiraz</option>
-                                </select>
-                            </td>
-                            <td>
-                                <input type="checkbox" name="Warranty Lost" value="true" />
-                                <label>Has Warranty Lost</label>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Item 05</td>
-                            <td>
-                                <input type="radio" name="box05" value="1" checked="" />
-                                <label>1</label>
-                                <input type="radio" name="box05" value="2" />
-                                <label>2</label>
-                            </td>
-                            <td>
-                                <input type="radio" name="type05" value="RmaU" />
-                                <label>Rma-U</label>
-                                <input type="radio" name="type05" value="Screened" checked="" />
-                                <label>Screened</label>
-                            </td>
-                            <td>
-                                <select name="city">
-                                    <option value="Sampa">Sampa</option>
-                                    <option value="Aquiraz">Aquiraz</option>
-                                </select>
-                            </td>
-                            <td>
-                                <input type="checkbox" name="Warranty Lost" value="true" />
-                                <label>Has Warranty Lost</label>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Item 06</td>
-                            <td>
-                                <input type="radio" name="box06" value="1" checked="" />
-                                <label>1</label>
-                                <input type="radio" name="box06" value="2" />
-                                <label>2</label>
-                            </td>
-                            <td>
-                                <input type="radio" name="type06" value="RmaU" />
-                                <label>Rma-U</label>
-                                <input type="radio" name="type06" value="Screened" checked="" />
-                                <label>Screened</label>
-                            </td>
-                            <td>
-                                <select name="city">
-                                    <option value="Sampa">Sampa</option>
-                                    <option value="Aquiraz">Aquiraz</option>
-                                </select>
-                            </td>
-                            <td>
-                                <input type="checkbox" name="Warranty Lost" value="true" />
-                                <label>Has Warranty Lost</label>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Item 07</td>
-                            <td>
-                                <input type="radio" name="box07" value="1" checked="" />
-                                <label>1</label>
-                                <input type="radio" name="box07" value="2" />
-                                <label>2</label>
-                            </td>
-                            <td>
-                                <input type="radio" name="type07" value="RmaU" />
-                                <label>Rma-U</label>
-                                <input type="radio" name="type07" value="Screened" checked="" />
-                                <label>Screened</label>
-                            </td>
-                            <td>
-                                <select name="city">
-                                    <option value="Sampa">Sampa</option>
-                                    <option value="Aquiraz">Aquiraz</option>
-                                </select>
-                            </td>
-                            <td>
-                                <input type="checkbox" name="Warranty Lost" value="true" />
-                                <label>Has Warranty Lost</label>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Item 08</td>
-                            <td>
-                                <input type="radio" name="box08" value="1" checked="" />
-                                <label>1</label>
-                                <input type="radio" name="box08" value="2" />
-                                <label>2</label>
-                            </td>
-                            <td>
-                                <input type="radio" name="type08" value="RmaU" />
-                                <label>Rma-U</label>
-                                <input type="radio" name="type08" value="Screened" checked="" />
-                                <label>Screened</label>
-                            </td>
-                            <td>
-                                <select name="city">
-                                    <option value="Sampa">Sampa</option>
-                                    <option value="Aquiraz">Aquiraz</option>
-                                </select>
-                            </td>
-                            <td>
-                                <input type="checkbox" name="Warranty Lost" value="true" />
-                                <label>Has Warranty Lost</label>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Item 09</td>
-                            <td>
-                                <input type="radio" name="box09" value="1" checked="" />
-                                <label>1</label>
-                                <input type="radio" name="box09" value="2" />
-                                <label>2</label>
-                            </td>
-                            <td>
-                                <input type="radio" name="type09" value="RmaU" />
-                                <label>Rma-U</label>
-                                <input type="radio" name="type09" value="Screened" checked="" />
-                                <label>Screened</label>
-                            </td>
-                            <td>
-                                <select name="city">
-                                    <option value="Sampa">Sampa</option>
-                                    <option value="Aquiraz">Aquiraz</option>
-                                </select>
-                            </td>
-                            <td>
-                                <input type="checkbox" name="Warranty Lost" value="true" />
-                                <label>Has Warranty Lost</label>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Item 10</td>
-                            <td>
-                                <input type="radio" name="box10" value="1" checked="" />
-                                <label>1</label>
-                                <input type="radio" name="box10" value="2" />
-                                <label>2</label>
-                            </td>
-                            <td>
-                                <input type="radio" name="type10" value="RmaU" />
-                                <label>Rma-U</label>
-                                <input type="radio" name="type10" value="Screened" checked="" />
-                                <label>Screened</label>
-                            </td>
-                            <td>
-                                <select name="city">
-                                    <option value="Sampa">Sampa</option>
-                                    <option value="Aquiraz">Aquiraz</option>
-                                </select>
-                            </td>
-                            <td>
-                                <input type="checkbox" name="Warranty Lost" value="true" />
-                                <label>Has Warranty Lost</label>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Item 11</td>
-                            <td>
-                                <input type="radio" name="box11" value="1" checked="" />
-                                <label>1</label>
-                                <input type="radio" name="box11" value="2" />
-                                <label>2</label>
-                            </td>
-                            <td>
-                                <input type="radio" name="type11" value="RmaU" />
-                                <label>Rma-U</label>
-                                <input type="radio" name="type11" value="Screened" checked="" />
-                                <label>Screened</label>
-                            </td>
-                            <td>
-                                <select name="city">
-                                    <option value="Sampa">Sampa</option>
-                                    <option value="Aquiraz">Aquiraz</option>
-                                </select>
-                            </td>
-                            <td>
-                                <input type="checkbox" name="Warranty Lost" value="true" />
-                                <label>Has Warranty Lost</label>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Item 12</td>
-                            <td>
-                                <input type="radio" name="box12" value="1" checked="" />
-                                <label>1</label>
-                                <input type="radio" name="box12" value="2" />
-                                <label>2</label>
-                            </td>
-                            <td>
-                                <input type="radio" name="type12" value="RmaU" />
-                                <label>Rma-U</label>
-                                <input type="radio" name="type12" value="Screened" checked="" />
-                                <label>Screened</label>
-                            </td>
-                            <td>
-                                <select name="city">
-                                    <option value="Sampa">Sampa</option>
-                                    <option value="Aquiraz">Aquiraz</option>
-                                </select>
-                            </td>
-                            <td>
-                                <input type="checkbox" name="Warranty Lost" value="true" />
-                                <label>Has Warranty Lost</label>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Item 13</td>
-                            <td>
-                                <input type="radio" name="box13" value="1" checked="" />
-                                <label>1</label>
-                                <input type="radio" name="box13" value="2" />
-                                <label>2</label>
-                            </td>
-                            <td>
-                                <input type="radio" name="type13" value="RmaU" />
-                                <label>Rma-U</label>
-                                <input type="radio" name="type13" value="Screened" checked="" />
-                                <label>Screened</label>
-                            </td>
-                            <td>
-                                <select name="city">
-                                    <option value="Sampa">Sampa</option>
-                                    <option value="Aquiraz">Aquiraz</option>
-                                </select>
-                            </td>
-                            <td>
-                                <input type="checkbox" name="Warranty Lost" value="true" />
-                                <label>Has Warranty Lost</label>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Item 14</td>
-                            <td>
-                                <input type="radio" name="box14" value="1" checked="" />
-                                <label>1</label>
-                                <input type="radio" name="box14" value="2" />
-                                <label>2</label>
-                            </td>
-                            <td>
-                                <input type="radio" name="type14" value="RmaU" />
-                                <label>Rma-U</label>
-                                <input type="radio" name="type14" value="Screened" checked="" />
-                                <label>Screened</label>
-                            </td>
-                            <td>
-                                <select name="city">
-                                    <option value="Sampa">Sampa</option>
-                                    <option value="Aquiraz">Aquiraz</option>
-                                </select>
-                            </td>
-                            <td>
-                                <input type="checkbox" name="Warranty Lost" value="true" />
-                                <label>Has Warranty Lost</label>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Item 15</td>
-                            <td>
-                                <input type="radio" name="box15" value="1" checked="" />
-                                <label>1</label>
-                                <input type="radio" name="box15" value="2" />
-                                <label>2</label>
-                            </td>
-                            <td>
-                                <input type="radio" name="type15" value="RmaU" />
-                                <label>Rma-U</label>
-                                <input type="radio" name="type15" value="Screened" checked="" />
-                                <label>Screened</label>
-                            </td>
-                            <td>
-                                <select name="city">
-                                    <option value="Sampa">Sampa</option>
-                                    <option value="Aquiraz">Aquiraz</option>
-                                </select>
-                            </td>
-                            <td>
-                                <input type="checkbox" name="Warranty Lost" value="true" />
-                                <label>Has Warranty Lost</label>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+            <a id="forkme_banner" href="https://github.com/danilojrr/datatables-custom-sorting">View on GitHub</a>
+
+            <h1 id="project_title">Datatables - Custom Sorting</h1>
+            <h2 id="project_tagline">Custom sorting input elements for Datatables 1.9.4 and jQuery 1.9.1</h2>
+
+            <section id="downloads">
+                <a class="zip_download_link" href="https://github.com/danilojrr/datatables-custom-sorting/zipball/master">Download this project as a .zip file</a>
+                <a class="tar_download_link" href="https://github.com/danilojrr/datatables-custom-sorting/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
     </div>
 
-    <!-- libraries -->
-    <script src="js/application.js"></script><!-- this file is the main js file from Core Admin template -->
-    <!--
-    <script src="bower_components/jquery/jquery.min.js"></script>
-    <script src="bower_components/datatables/media/js/jquery.dataTables.js"></script>
-    <script src="bower_components/iCheck/icheck.min.js"></script>
-    -->
-    <!-- app -->
-    <script src="js/dataTables.customSorting.js"></script>
-    <script src="js/dataTables.factory.js"></script>
-    <script src="js/script.js"></script>
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+        <section id="main_content" class="inner">
+            <h1>
+                <a id="datatables---custom-sorting" class="anchor" href="#datatables---custom-sorting" aria-hidden="true">
+                    <span class="octicon octicon-link"></span>
+                </a>
+                Datatables - Custom Sorting
+            </h1>
+
+            <blockquote>
+                <p>This is an example of how to implement custom sorting for HTML input elements with <a href="http://legacy.datatables.net/ref">DataTables 1.9.4</a> and <a href="http://jquery.com/">jQuery 1.9.1</a>.</p>
+                <a class="btn-lg" href="demo.html">Demo</a>
+            </blockquote>
+
+            <p><strong>Info</strong>: Demo page is using <a href="http://fronteed.com/iCheck/">iCheck 1.0.2</a> to render checkboxes and radio buttons. To see how to use it, check its website.</p>
+
+            <h2>
+                <a id="usage" class="anchor" href="#usage" aria-hidden="true">
+                    <span class="octicon octicon-link"></span>
+                </a>
+                Usage
+            </h2>
+
+            <ol>
+                <li>
+                    <p>Put the DataTables css file</p>
+                    <pre><code>&lt;link rel="stylesheet" href="path/to/jquery.min.js" /&gt;</code></pre>
+                </li>
+                <li>
+                    <p>Put jQuery and DataTables scripts in your page.</p>
+                    <pre><code>&lt;script src="path/to/jquery.js"&gt;&lt;/script&gt;
+&lt;script src="path/to/jquery.dataTables.js"&gt;&lt;/script&gt;</code></pre>
+
+                    <p>Check the <a href="http://datatables.net">DataTables</a> website for how to style and use its API. But remember that we are using the 1.9.4 version. So, check the <a href="http://legacy.datatables.net/ref">docs of the legacy API</a>.</p>
+                </li>
+                <li>
+                    <p>Put the <strong>custom sorting</strong> javascript file after dataTables.js file.</p>
+                    <p><pre><code>&lt;script src="path/to/dataTables.customSorting.js"&gt;&lt;/script&gt;</code></pre></p>
+                </li>
+                <li>
+                    <p>Set your table markup. You must use <code>&lt;thead&gt;</code> and <code>&lt;tbody&gt;</code> tags in the table.</p>
+                    <p><pre><code>&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Product Name&lt;/th&gt;
+            &lt;th&gt;Warranty Lost?&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Remote Controlled Car&lt;/td&gt;
+            &lt;td&gt;&lt;input type="checkbox" value="true"&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre></p>
+                </li>
+                <li>
+                    <p>Now setup the DataTables plugin with these options.</p>
+                    <pre><code>$('table').dataTable({
+    "aoColumns": {
+        null,
+        "sSortDataType": "checkbox"
+    }
+});</code></pre>
+                    <p>You must set an option called <code>aoColumns</code> to the DataTables setup. Each property of it represents the <code>th</code> of the table element.</p>
+                    <p>Where you want the default sorting behavior of DataTables, set null for that property. And for a custom sorting, set the <code>sSortDataType</code> property with a valid custom sorting type: <code>checkbox</code>, <code>radiobutton</code> or <code>select</code>.</p>
+                </li>
+                <li>That's it! Now you can sort the column of the example with checkboxes.</li>
+            </ol>
+
+            <h2>
+                <a id="datatables-factory" class="anchor" href="#datatables-factory" aria-hidden="true">
+                    <span class="octicon octicon-link"></span>
+                </a>
+                Plus Content - DataTables Factory
+            </h2>
+
+            <ol>
+                <li>
+                    <p>So far, so good. But I also implemented a factory for DataTables plugin. Thus, you can instantiate DataTables and apply the custom sorting very easliy.</p>
+                    <p>To use it, with jQuery, DataTables and custom sorting js files in place, like we saw before, you need to put the <strong>factory</strong> file after the <strong>custom sorting</strong> file.</p>
+                    <p><pre><code>&lt;script src="path/to/dataTables.customSorting.js"&gt;&lt;/script&gt;
+&lt;script src="path/to/dataTables.factory.js"&gt;&lt;/script&gt;</code></pre></p>
+                </li>
+                <li>
+                    <p>Set the <code>data-sorting-type=""</code> attribute to the desired <code>&lt;th&gt;</code> element in your table.</p>
+                    <p><pre><code>&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Product Name&lt;/th&gt;
+            &lt;th <strong>data-sorting-type="checkbox"</strong>&gt;Warranty Lost?&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Remote Controlled Car&lt;/td&gt;
+            &lt;td&gt;&lt;input type="checkbox" value="true"&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre></p>
+                    <p>The valid types for custom sorting attribute are <code>checkbox</code>, <code>radiobutton</code> and <code>select</code>.</p>
+                </li>
+                <li>
+                    <p>Now, all you need to do is call the <code>instantiate()</code> method from the <code>dataTablesFactory</code> object.</p>
+                    <p><pre><code>dataTablesFactory().instantiate();</code></pre></p>
+                    <p>Done! =]</p>
+                    <p>The factory will see that you desire to sort the column with the <code>data-sorting-type=""</code> attribute and it configure DataTables for you.</p>
+                </li>
+            </ol>
+
+            <h2>
+                <a id="datatables-factory" class="anchor" href="#datatables-factory" aria-hidden="true">
+                    <span class="octicon octicon-link"></span>
+                </a>
+                Factory API
+            </h2>
+
+            <p>All methods of the API are chainable. So, doesn't matter the order you call them, except for the <code>instantiate()</code> method. It need to be the last one.</p>
+
+            <h3>instantiate()</h3>
+
+            <p><strong>Description</strong>: Initializes the DataTables.</p>
+
+            <p><strong>Parameters</strong>: None.</p>
+
+            <p><strong>Returns</strong>: DataTables Object.</p>
+
+            <p>Example</p>
+            <p><pre><code>dataTablesFactory()<strong>.instantiate()</strong>;</code></pre></p>
+
+            <h3>selector()</h3>
+
+            <p><strong>Description</strong>: Specify a selector for the table.</p>
+
+            <p><strong>Parameters</strong>: jQuery Selector.</p>
+
+            <p><strong>Returns</strong>: Factory API.</p>
+
+            <p>Example</p>
+            <p><pre><code>dataTablesFactory()
+    <strong>.selector('#myTable')</strong>
+    .instantiate();</code></pre></p>
+
+            <h3>setup()</h3>
+
+            <p><strong>Description</strong>: Set the DataTables options. You can see all options on the <a href="http://legacy.datatables.net/ref">DataTable legacy docs</a>.</p>
+
+            <p><strong>Parameters</strong>: Javascript Object Literal.</p>
+
+            <p><strong>Returns</strong>: Factory API.</p>
+
+            <p>Example</p>
+            <p><pre><code>dataTablesFactory()
+    .selector('#myTable')
+    <strong>.setup({
+        "bPaginate": false
+    })</strong>
+    .instantiate();</code></pre></p>
+        </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+        <footer class="inner">
+            <p class="copyright">Datatables - Custom Sorting maintained by <a href="https://github.com/danilojrr">danilojrr</a></p>
+            <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+        </footer>
+    </div>
 </body>
 
 </html>

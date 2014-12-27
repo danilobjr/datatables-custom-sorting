@@ -6,7 +6,7 @@ $(function () {
         radioClass: 'iradio_flat-blue'
     });
 
-    dataTablesFactory
+    dataTablesFactory()
         // .selector('#special')
         // .setup({
         //     "sPaginationType": "full_numbers"
