@@ -92,8 +92,8 @@ DataTables Factory - Plus Content
 
     The factory will see that you desire to sort the column with the <code>data-sorting-type=""</code> attribute and it configure DataTables for you.
 
-Factory API
------------
+API
+---
 
 All methods of the API are chainable. So, doesn't matter the order you call them, except for the <code>instantiate()</code> method. It need to be the last one.
 
