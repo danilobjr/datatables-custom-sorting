@@ -84,9 +84,9 @@ DataTables Factory - Plus Content
 
     The valid types for custom sorting attribute are <code>checkbox</code>, <code>radiobutton</code> and <code>select</code>.
 
-3. Now, all you need to do is call the <code>instantiate()</code> method from the <code>dataTablesFactory</code> object.
+3. Now, all you need to do is call the <code>init()</code> method from the <code>dataTablesFactory</code> object.
 
-    <pre><code>dataTablesFactory().instantiate();</code></pre>
+    <pre><code>dataTablesFactory().init();</code></pre>
 
     Done! =]
 
@@ -95,9 +95,9 @@ DataTables Factory - Plus Content
 API
 ---
 
-All methods of the API are chainable. So, doesn't matter the order you call them, except for the <code>instantiate()</code> method. It need to be the last one.
+All methods of the API are chainable. So, doesn't matter the order you call them, except for the <code>init()</code> method. It need to be the last one.
 
-### instantiate()
+### init()
 
 **Description**: Initializes the DataTables.
 
@@ -106,7 +106,7 @@ All methods of the API are chainable. So, doesn't matter the order you call them
 **Returns**: DataTables Object.
 
 Example
-<pre><code>dataTablesFactory()<strong>.instantiate()</strong>;</code></pre>
+<pre><code>dataTablesFactory()<strong>.init()</strong>;</code></pre>
 
 ### selector()
 
@@ -119,7 +119,7 @@ Example
 Example
 <pre><code>dataTablesFactory()
     <strong>.selector('#myTable')</strong>
-    .instantiate();</code></pre>
+    .init();</code></pre>
 
 <h3>setup()</h3>
 
@@ -135,4 +135,4 @@ Example
     <strong>.setup({
         "bPaginate": false
     })</strong>
-    .instantiate();</code></pre>
+    .init();</code></pre>
