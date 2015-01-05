@@ -11,5 +11,5 @@ $(function () {
         // .setup({
         //     "sPaginationType": "full_numbers"
         // })
-        .instantiate();
+        .init();
 });

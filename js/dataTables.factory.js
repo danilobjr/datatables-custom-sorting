@@ -10,7 +10,7 @@ function dataTablesFactory() {
     var _api = {
         selector: selector,
         setup: setup,
-        instantiate: instantiate
+        init: instantiate
     };
 
     return _api;
