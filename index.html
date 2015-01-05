@@ -132,8 +132,8 @@
                     <p>The valid types for custom sorting attribute are <code>checkbox</code>, <code>radiobutton</code> and <code>select</code>.</p>
                 </li>
                 <li>
-                    <p>Now, all you need to do is call the <code>instantiate()</code> method from the <code>dataTablesFactory</code> object.</p>
-                    <p><pre><code>dataTablesFactory().instantiate();</code></pre></p>
+                    <p>Now, all you need to do is call the <code>init()</code> method from the <code>dataTablesFactory</code> object.</p>
+                    <p><pre><code>dataTablesFactory().init();</code></pre></p>
                     <p>Done! =]</p>
                     <p>The factory will see that you desire to sort the column with the <code>data-sorting-type=""</code> attribute and it configure DataTables for you.</p>
                 </li>
@@ -146,9 +146,9 @@
                 Factory API
             </h2>
 
-            <p>All methods of the API are chainable. So, doesn't matter the order you call them, except for the <code>instantiate()</code> method. It need to be the last one.</p>
+            <p>All methods of the API are chainable. So, doesn't matter the order you call them, except for the <code>init()</code> method. It need to be the last one.</p>
 
-            <h3>instantiate()</h3>
+            <h3>init()</h3>
 
             <p><strong>Description</strong>: Initializes the DataTables.</p>
 
@@ -157,7 +157,7 @@
             <p><strong>Returns</strong>: DataTables Object.</p>
 
             <p>Example</p>
-            <p><pre><code>dataTablesFactory()<strong>.instantiate()</strong>;</code></pre></p>
+            <p><pre><code>dataTablesFactory()<strong>.init()</strong>;</code></pre></p>
 
             <h3>selector()</h3>
 
@@ -170,7 +170,7 @@
             <p>Example</p>
             <p><pre><code>dataTablesFactory()
     <strong>.selector('#myTable')</strong>
-    .instantiate();</code></pre></p>
+    .init();</code></pre></p>
 
             <h3>setup()</h3>
 
@@ -186,7 +186,7 @@
     <strong>.setup({
         "bPaginate": false
     })</strong>
-    .instantiate();</code></pre></p>
+    .init();</code></pre></p>
         </section>
     </div>
 
