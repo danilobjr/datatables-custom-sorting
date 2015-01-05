@@ -114,7 +114,7 @@ Example
 
 **Parameters**: jQuery Selector.
 
-**Returns**: Factory API.
+**Returns**: DataTables Factory API.
 
 Example
 <pre><code>dataTablesFactory()
@@ -127,7 +127,7 @@ Example
 
 **Parameters**: Javascript Object Literal.
 
-**Returns**: Factory API.
+**Returns**: DataTables Factory API.
 
 Example
 <pre><code>dataTablesFactory()
